@@ -1,0 +1,84 @@
+Intro
+Gra imprezowa, pozwalaj¹ca zagraæ w planszówkê ze znajomymi na jednym urz¹dzeniu(telefonie lub komputerze).
+
+
+Gameplay Description
+Celem graczy jest dotarcie do mety, plansza to zwyk³a linia od startu do mety podzielona na pola (niektóre z pól mog³yby dawaæ bonusy np.2x do
+rzutu kostk¹ po wygraniu ewentualnej minigierki która by siê wtedy aktywowa³a). Po wybraniu opcji "graj" w menu g³ównym gracze mogliby ustaliæ d³ugoœæ
+gry (mierzon¹ w wielkoœci planszy), stworzyæ "konta" (wybraæ kolor pionka i nick), nastêpnie gracz rzuca³by kostk¹ i odpowiada³ na pytanie - w przypadku
+dobrej odpowiedzi móg³by poruszyæ siê o wyrzucon¹ iloœæ pól, w innym wypadku musia³by czekaæ kolejkê (dosta³by podpowiedŸ do innego pytania), chyba ¿e
+trafi³ na pole z minigierk¹, wtedy najpierw by j¹ zakoñczy³ i po niej dosta³ zwyk³e pytanie, które zwiêkszy³o by wynik dwukrotnie, lub w przypadku przegrania minigierki zostawi³oby wynik w niezmienionej postaci. Po zakoñczeniu tury przekaza³by 
+telefon (lub myszkê) nastêpnemu graczowi, i tak a¿ do momentu dotarcia jednego z nich do mety. Minigry mo¿naby dodaæ kiedy g³ówne systemy (poruszanie
+siê po planszy i quiz) zosta³yby skoñczone, ale nawet wtedy powinny byæ bardzo proste i nie zajmowaæ wiêcej ni¿ 30 sekund (np. proste minigierki z pou).
+
+Artistic Style Outline
+Postacie i kostki rzucane minimalistyczne, wystarczy ogólny zarys pionka/kostki. Plansza to pola w ró¿nych kolorach z drobnymi oznaczeniami(np. 2x jako zdublowanie wyniku rzutu).
+Interfejs powinien mieæ w³asne, subtelne animacje. G³ównie grafiki 2D ale z izometryczn¹ plansz¹.
+
+Systematic Breakdown of Components
+[z tego co rozumiem, tutaj trzeba opisaæ ca³e systemy i pojedyñcze elementy które trzeba stworzyæ]
+
+1.Interfejs
+-menu g³ówne
+-ekran tworzenia kont (wybierania nicku i koloru pionka)
+-animowane komunikaty i przyciski rzutu kostk¹, kolejnej tury, zwyciêstwa itp.
+
+2.Plansza i poruszanie siê pionkiem
+-plansza ma start i metê
+-aniamacja "skakania" pionka
+-poruszenie pionka o okreœlon¹ iloœæ pól w zale¿noœci od wyrzuconej liczby
+-specjalne pola aktywuj¹ce minigierki
+
+[Je¿eli wystarczy czasu]
+3.Minigry
+-krótkie i proste
+-je¿eli wygrane daj¹ bonus
+-kontrowane dotykiem lub myszk¹
+
+4.Tury graczy
+-losowy rzut kostk¹
+-panel z pytaniem i przyciski z odpowiedziami
+-wyskakuj¹ce powiadomienia o poprawnej odpowiedzi i koñcu tury
+
+Asset Breakdown
+Grafikia:
+-pola planszy (kilka rodzajów które mo¿na skopiowaæ tworz¹c ca³¹ planszê w Unity)
+-pionki, t³o
+-menu g³ówne(tytu³, przyciski i t³o)
+-interfejs w grze(animacja 2D kostki, panel z  informacj¹ o aktualnej turze gracza, przycisk kolejnej tury, panel pytania i odpowiedzi,
+ powiadomienia o minigierce, zwyciêstwie i bonusach)
+-ewentualne assety minigier (do uzupe³nienia)
+-logo(ikona gry)
+
+Tekst:
+-powiadomienia dla gracza
+-pytania do quizu 
+-ewentualny tutorial
+
+DŸwiêk:
+-prosty utwór w tle
+-efekty dŸwiêkowe najwa¿niejszych akcji (klikania przycisków, kolejnej tury, rzutu kostk¹)
+
+Game Flow
+rozpoczêcie gry(ustawienie czasu trwania rozgrywki w d³ugoœci planszy) - pêtla(rzut kostk¹ - pytanie quizu- animacja poruszania siê pionka - kolejna tura) - koniec gry
+[minigierki mo¿na dodaæ dla urozmaicenia gry np. pomiêdzy rzutem kostk¹ a pytaniem] 
+
+Timeline
+3 tygodnie:
+-drugi tydzieñ ferii (prosty prototyp, poruszanie siê i system tur, najwa¿niejsze grafiki)
+-kolejny tydzieñ (dokoñczenie prototypu i dopracowanie na podstawie testów)
+-póŸniej mo¿na wymyœlaæ minigry, pytania i dokañczaæ to czego nie zd¹¿ymy 
+
+Ogólnie gra musi byæ doœæ prosta bo mamy j¹ szybko skoñczyæ, dodatkowe rzeczy mo¿na wymyœlaæ jak bêdziemy mieli prototyp (chyba mamy czas do po³owy marca)
+Additions and extra Ideas
+gra nie wokó³ jednego telefonu a ka¿dy  sterowa³by przez osobny telefon co da³oby wiêksze mo¿liwoœci quiz nie by³by widoczny przez innych graczy itp.
+
+
+
+
+
+
+
+
+
+
