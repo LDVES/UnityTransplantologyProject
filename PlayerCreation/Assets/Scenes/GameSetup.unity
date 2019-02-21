@@ -1876,6 +1876,7 @@ MonoBehaviour:
   PlayerPanelPrefab: {fileID: 1375745779124452346, guid: 3c6d27d11eb0a284ca88b39f1a23ec3c,
     type: 3}
   PlayerGridLayout: {fileID: 1648061813}
+  gameManager: {fileID: 405983616}
   playerAmount: 1
   maxPlayerAmount: 4
 --- !u!1 &1750242288
@@ -2045,6 +2046,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: TestScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1648061818}
+        m_MethodName: CreatePlayers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
