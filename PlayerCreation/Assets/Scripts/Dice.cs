@@ -6,47 +6,42 @@ public class Dice : MonoBehaviour
 {
     public Sprite[] diceSprites;
     public GameControl gameControl;
-    private SpriteRenderer renderer;
-    private int whosTurn = 1;
-    private bool isRollAllowed = true;
+    public bool isDiceRollAllowed = true;
+
+    private SpriteRenderer diceRenderer;
+    private int randomDiceResult;
 
     void Start()
     {
-        renderer = GetComponent<SpriteRenderer>();
-        renderer.sprite = diceSprites[5];
+        diceRenderer = GetComponent<SpriteRenderer>();
+        diceRenderer.sprite = diceSprites[5];
     }
 
 
     void OnMouseDown()
     {
-        if (!gameControl.GameOver && isRollAllowed)
-        {
+        if (isDiceRollAllowed)
             StartCoroutine("Roll");
-        }
     }
 
     private IEnumerator Roll()
     {
-        isRollAllowed = false;
+        isDiceRollAllowed = false;
         int randomDiceSide = 0;
-        for (int i = 0; i <= 20; i++)
+        for (int i = 0; i <= 15; i++)
         {
             randomDiceSide = Random.Range(0, 6);
-            renderer.sprite = diceSprites[randomDiceSide];
+            diceRenderer.sprite = diceSprites[randomDiceSide];
             yield return new WaitForSeconds(0.05f);
         }
 
         gameControl.diceSideThrown = randomDiceSide + 1;
-        if (whosTurn == 1)
-        {
-            gameControl.MovePlayer(1);
-        }
-        else if (whosTurn == -1)
-        {
-            gameControl.MovePlayer(2);
-        }
-        whosTurn *= -1;
-        isRollAllowed = true;
+        randomDiceResult = randomDiceSide + 1;
+        //TODO: show panel with quiz question, move if correct
+    }
 
+    public int GetDiceResult()
+    {
+        return randomDiceResult;
     }
 }

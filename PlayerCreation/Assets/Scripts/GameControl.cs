@@ -7,7 +7,6 @@ public class GameControl : MonoBehaviour
     public int diceSideThrown;
     public int Player1StartWaypoint = 0;
     public int Player2StartWaypoint = 0;
-    public bool GameOver = false;
 
     public PlayerMovement player1Movement;
     public PlayerMovement player2Movement;
@@ -36,13 +35,11 @@ public class GameControl : MonoBehaviour
         if (player1Movement.waypointIndex == player1Movement.waypoints.Length)
         {
             print("Player 1 wins!");
-            GameOver = true;
         }
 
         if (player2Movement.waypointIndex == player2Movement.waypoints.Length)
         {
             print("Player 2 wins!");
-            GameOver = true;
         }
 
     }

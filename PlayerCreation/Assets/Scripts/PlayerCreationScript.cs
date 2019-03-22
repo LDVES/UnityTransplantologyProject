@@ -30,7 +30,7 @@ public class PlayerCreationScript : MonoBehaviour
         {
             //get player's attributes from ui elements on PlayerPanels
             string nick = playerPanel.GetComponentInChildren<InputField>().text;
-            Image playerGraphics = playerPanel.FindComponentInChildWithTag<Image>("SelectedCounter");
+            Sprite playerGraphics = playerPanel.FindComponentInChildWithTag<Image>("SelectedCounter").sprite;
 
             //adds player to gameManager's list so it can be spawned in next scene
             Player player = new Player(nick, playerGraphics);

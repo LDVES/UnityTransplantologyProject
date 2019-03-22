@@ -93,9 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CounterGraphics:
-  - {fileID: 21300000, guid: ac2f60a1d801fa84fa14808a4b256157, type: 3}
-  - {fileID: 21300000, guid: 96a2345ff877b3f48b56e8d28c3d505a, type: 3}
-  - {fileID: 21300000, guid: 3e3bc2f5d53abc64eb20c710d3db6455, type: 3}
+  - {fileID: 21300000, guid: 2d71b7f4c64240d4ca6adf5c56a20fe3, type: 3}
+  - {fileID: 21300000, guid: d285ea2c42e1b9743a5b29649195ca7c, type: 3}
+  - {fileID: 21300000, guid: aca823ae71ad90c43976bb9e577debf8, type: 3}
   PlayerPanelGraphics: {fileID: 1375745780023763533}
 --- !u!1 &1375745780023763523
 GameObject:
