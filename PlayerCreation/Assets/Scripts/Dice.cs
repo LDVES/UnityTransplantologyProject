@@ -5,8 +5,9 @@ using UnityEngine;
 public class Dice : MonoBehaviour
 {
     public Sprite[] diceSprites;
-    public GameControl gameControl;
+    //public GameControl gameControl;
     public bool isDiceRollAllowed = true;
+    public Quiz quizScript;
 
     private SpriteRenderer diceRenderer;
     private int randomDiceResult;
@@ -35,9 +36,9 @@ public class Dice : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
-        gameControl.diceSideThrown = randomDiceSide + 1;
+        //gameControl.diceSideThrown = randomDiceSide + 1;
         randomDiceResult = randomDiceSide + 1;
-        //TODO: show panel with quiz question, move if correct
+        quizScript.ShowQuizPanel();
     }
 
     public int GetDiceResult()

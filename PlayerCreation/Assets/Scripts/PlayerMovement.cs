@@ -5,15 +5,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Transform[] waypoints;
+    public List<Transform> waypoints = new List<Transform>();
     public float Speed = 1f;
-    public int waypointIndex = 0;
-    public bool moveAllowed = false;
+    public int FinishWaypointIndex = 0;
+    public int waypointIndex = 1;
 
-    void Start()
-    {
-        transform.position = waypoints[waypointIndex].transform.position;
-    }
+    private bool moveAllowed = false;
 
     void Update()
     {
@@ -21,19 +18,30 @@ public class PlayerMovement : MonoBehaviour
             Move();
     }
 
-    private void Move()
+    public void Move()
     {
         print(waypointIndex);
-        print(Vector2.Distance(transform.position, waypoints[waypointIndex].transform.position));
-        if (waypointIndex <= waypoints.Length - 1)
+        print("finish: " + FinishWaypointIndex);
+        //print(Vector2.Distance(transform.position, waypoints[waypointIndex].transform.position));
+        moveAllowed = true;
+        if (waypointIndex <= waypoints.Count - 1)
         {
-            transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, Speed * Time.deltaTime);
+            //FinishWaypointIndex = waypointIndex + GameObject.FindGameObjectWithTag("Dice").GetComponent<Dice>().GetDiceResult();
 
-            if (Vector2.Distance(transform.position, waypoints[waypointIndex].transform.position) <= 0.01f)
+            if (waypointIndex != FinishWaypointIndex)
             {
-                waypointIndex += 1;
+                transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, Speed * Time.deltaTime);
+
+                if (Vector2.Distance(transform.position, waypoints[waypointIndex].transform.position) <= 0.01f)
+                {
+                    waypointIndex += 1;
+                }
             }
-            
+            else
+            {
+                moveAllowed = false;
+                GameObject.FindGameObjectWithTag("GameBoard").GetComponent<TurnManager>().NextTurn();
+            }
         }
     }
 }
