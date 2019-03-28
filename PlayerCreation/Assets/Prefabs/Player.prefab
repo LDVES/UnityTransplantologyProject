@@ -93,4 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  Speed: 1
+  Speed: 10
+  FinishWaypointIndex: 0
+  waypointIndex: 1
