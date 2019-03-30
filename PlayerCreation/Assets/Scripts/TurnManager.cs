@@ -31,7 +31,7 @@ public class TurnManager : MonoBehaviour
     IEnumerator ShowPopup()
     {
         InfoPanel.SetActive(true);
-        InfoText.text = "Teraz kolej: " + spawnScript.PlayerGameObjectList[TurnIndex].name;
+        InfoText.text = spawnScript.PlayerGameObjectList[TurnIndex].name;
         yield return new WaitForSeconds(2f);
         InfoPanel.SetActive(false);
         StopCoroutine("ShowPopup");

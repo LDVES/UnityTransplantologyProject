@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2152327594020918442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.24598894, y: 0.21795888, z: 1}
+  m_LocalScale: {x: 0.13107848, y: 0.11633566, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: -1283315763
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d71b7f4c64240d4ca6adf5c56a20fe3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89c0830ac1fb1d048aee442e27b489a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -93,6 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  Speed: 10
+  Speed: 3
   FinishWaypointIndex: 0
   waypointIndex: 1
