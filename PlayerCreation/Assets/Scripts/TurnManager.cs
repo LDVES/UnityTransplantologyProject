@@ -7,9 +7,9 @@ public class TurnManager : MonoBehaviour
 {
     public int TurnIndex = 0;
     public Dice dice;
-    public GameObject InfoPanel;
     public TextMeshProUGUI InfoText;
     public SpawnPlayerScript spawnScript;
+    public TogglePanel togglePanelScript;
 
     private GameManagerScript gameManager;
 
@@ -21,19 +21,19 @@ public class TurnManager : MonoBehaviour
     public void NextTurn()
     {
         StartCoroutine("ShowPopup");
-        TurnIndex ++;
+        TurnIndex++;
         if (TurnIndex > gameManager.PlayerList.Count - 1)
             TurnIndex = 0;
 
-        dice.isDiceRollAllowed = true;      
+        dice.isDiceRollAllowed = true;
     }
 
     IEnumerator ShowPopup()
     {
-        InfoPanel.SetActive(true);
-        InfoText.text = spawnScript.PlayerGameObjectList[TurnIndex].name;
-        yield return new WaitForSeconds(2f);
-        InfoPanel.SetActive(false);
+        togglePanelScript.ShowInfoPanel();
+        InfoText.text = "Teraz kolej: " + spawnScript.PlayerGameObjectList[TurnIndex].name;
+        yield return new WaitForSeconds(1.5f);
+        togglePanelScript.HideInfoPanel();
         StopCoroutine("ShowPopup");
     }
 }

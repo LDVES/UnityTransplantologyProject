@@ -21,7 +21,7 @@ public class SpawnPlayerScript : MonoBehaviour
             GameObject temporaryPlayer = null;
             temporaryPlayer = PlayerPrefab;
             temporaryPlayer.name = player.nick;
-            prefabSpriteRenderer = temporaryPlayer.GetComponent<SpriteRenderer>();
+            prefabSpriteRenderer = temporaryPlayer.GetComponentInChildren<SpriteRenderer>();
             prefabSpriteRenderer.sprite = player.counterGraphics;
             temporaryPlayer.GetComponent<PlayerMovement>().waypoints = Waypoints;
             GameObject instantiatedPlayer =  Instantiate(temporaryPlayer, new Vector2(StartWaypoint.transform.position.x, StartWaypoint.transform.position.y), Quaternion.identity);

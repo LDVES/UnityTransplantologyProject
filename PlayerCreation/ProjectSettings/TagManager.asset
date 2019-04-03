@@ -19,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -55,4 +55,7 @@ TagManager:
     locked: 0
   - name: Dice
     uniqueID: 3927600827
+    locked: 0
+  - name: Canvas
+    uniqueID: 1817163053
     locked: 0

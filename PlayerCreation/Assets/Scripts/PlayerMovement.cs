@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public List<Transform> waypoints = new List<Transform>();
+    public Animator PlayerAnimator;
     public float Speed = 1f;
     public int FinishWaypointIndex = 0;
     public int waypointIndex = 1;
@@ -20,10 +21,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move()
     {
-        print(waypointIndex);
-        print("finish: " + FinishWaypointIndex);
-        //print(Vector2.Distance(transform.position, waypoints[waypointIndex].transform.position));
         moveAllowed = true;
+        PlayerAnimator.SetBool("IsMoving", true);
+
         if (waypointIndex <= waypoints.Count - 1)
         {
             //FinishWaypointIndex = waypointIndex + GameObject.FindGameObjectWithTag("Dice").GetComponent<Dice>().GetDiceResult();
@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 moveAllowed = false;
+                PlayerAnimator.SetBool("IsMoving", false);
                 GameObject.FindGameObjectWithTag("GameBoard").GetComponent<TurnManager>().NextTurn();
             }
         }

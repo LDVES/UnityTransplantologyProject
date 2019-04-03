@@ -8,6 +8,7 @@ public class Dice : MonoBehaviour
     //public GameControl gameControl;
     public bool isDiceRollAllowed = true;
     public Quiz quizScript;
+    public TogglePanel togglePanel;
 
     private SpriteRenderer diceRenderer;
     private int randomDiceResult;
@@ -35,10 +36,8 @@ public class Dice : MonoBehaviour
             diceRenderer.sprite = diceSprites[randomDiceSide];
             yield return new WaitForSeconds(0.05f);
         }
-
-        //gameControl.diceSideThrown = randomDiceSide + 1;
         randomDiceResult = randomDiceSide + 1;
-        quizScript.ShowQuizPanel();
+        togglePanel.ShowQuizPanel();
     }
 
     public int GetDiceResult()
