@@ -37,6 +37,7 @@ public class Dice : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         randomDiceResult = randomDiceSide + 1;
+        quizScript.ShowRandomQuestion();
         togglePanel.ShowQuizPanel();
     }
 

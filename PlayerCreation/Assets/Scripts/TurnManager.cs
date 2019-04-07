@@ -8,8 +8,9 @@ public class TurnManager : MonoBehaviour
     public int TurnIndex = 0;
     public Dice dice;
     public TextMeshProUGUI InfoText;
-    public SpawnPlayerScript spawnScript;
-    public TogglePanel togglePanelScript;
+    public SpawnPlayerScript SpawnScript;
+    public TogglePanel TogglePanelScript;
+    public TextMeshProUGUI QuizTopText;
 
     private GameManagerScript gameManager;
 
@@ -24,16 +25,17 @@ public class TurnManager : MonoBehaviour
         TurnIndex++;
         if (TurnIndex > gameManager.PlayerList.Count - 1)
             TurnIndex = 0;
-
+        
+        QuizTopText.text = "Pytanie dla: " + SpawnScript.PlayerGameObjectList[TurnIndex].name;
         dice.isDiceRollAllowed = true;
     }
 
     IEnumerator ShowPopup()
     {
-        togglePanelScript.ShowInfoPanel();
-        InfoText.text = "Teraz kolej: " + spawnScript.PlayerGameObjectList[TurnIndex].name;
+        TogglePanelScript.ShowInfoPanel();
+        InfoText.text = "Teraz kolej: " + SpawnScript.PlayerGameObjectList[TurnIndex].name;
         yield return new WaitForSeconds(1.5f);
-        togglePanelScript.HideInfoPanel();
+        TogglePanelScript.HideInfoPanel();
         StopCoroutine("ShowPopup");
     }
 }
