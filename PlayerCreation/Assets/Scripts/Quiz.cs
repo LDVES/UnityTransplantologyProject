@@ -17,6 +17,12 @@ public class Quiz : MonoBehaviour
     private PlayerMovement currentPlayerMovement;
     private List<string> answers = new List<string>();
 
+    private void SetCurrentPlayerText()
+    {
+        //Change top text to current player
+        TopText.text = "Pytanie dla: " + spawnScript.PlayerGameObjectList[turnManger.TurnIndex].name;
+    }
+
     public void GoodAnswer()
     {
         toggleScript.HideQuizPanel();
@@ -37,6 +43,8 @@ public class Quiz : MonoBehaviour
 
     public void ShowRandomQuestion()
     {
+        SetCurrentPlayerText();
+
         //get random question
         int randomId = Random.Range(1, Questions.GetRowList().Count);
         QuestionsTable.Row _currentQuestion = Questions.Find_Id(randomId.ToString());

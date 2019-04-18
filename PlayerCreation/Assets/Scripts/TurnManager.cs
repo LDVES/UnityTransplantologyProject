@@ -10,7 +10,6 @@ public class TurnManager : MonoBehaviour
     public TextMeshProUGUI InfoText;
     public SpawnPlayerScript SpawnScript;
     public TogglePanel TogglePanelScript;
-    public TextMeshProUGUI QuizTopText;
 
     private GameManagerScript gameManager;
 
@@ -21,12 +20,11 @@ public class TurnManager : MonoBehaviour
 
     public void NextTurn()
     {
-        StartCoroutine("ShowPopup");
         TurnIndex++;
         if (TurnIndex > gameManager.PlayerList.Count - 1)
             TurnIndex = 0;
+        StartCoroutine("ShowPopup");
         
-        QuizTopText.text = "Pytanie dla: " + SpawnScript.PlayerGameObjectList[TurnIndex].name;
         dice.isDiceRollAllowed = true;
     }
 
