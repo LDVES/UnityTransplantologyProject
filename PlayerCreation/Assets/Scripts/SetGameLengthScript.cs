@@ -5,17 +5,16 @@ using UnityEngine.UI;
 
 public class SetGameLengthScript : MonoBehaviour
 {
-    public GameManagerScript GameManager;
 
     void Awake()
     {
         //default value
-        GameManager.GameLength = 10;   
+        GameManagerScript.GameLength = 15;   
     }
 
     public void SetGameLength(int length)
-    { 
+    {
         //TODO: set values properly after testing
-        GameManager.GameLength = length;
+        GameManagerScript.GameLength = length;
     }
 }

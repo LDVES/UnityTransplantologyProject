@@ -10,13 +10,11 @@ public class SpawnPlayerScript : MonoBehaviour
     public List<Transform> Waypoints = new List<Transform>();
 
     private SpriteRenderer prefabSpriteRenderer;
-    private GameManagerScript gameManager;
 
     private void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>();
 
-        foreach (Player player in gameManager.PlayerList)
+        foreach (Player player in GameManagerScript.PlayerList)
         {
             GameObject temporaryPlayer = null;
             temporaryPlayer = PlayerPrefab;
@@ -26,7 +24,6 @@ public class SpawnPlayerScript : MonoBehaviour
             temporaryPlayer.GetComponent<PlayerMovement>().waypoints = Waypoints;
             GameObject instantiatedPlayer =  Instantiate(temporaryPlayer, new Vector2(StartWaypoint.transform.position.x, StartWaypoint.transform.position.y), Quaternion.identity);
             instantiatedPlayer.name = player.nick;
-
         }
 
         foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))

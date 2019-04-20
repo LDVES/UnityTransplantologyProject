@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
-    public int GameLength;
-    [SerializeField]
-    public List<Player> PlayerList = new List<Player>();
+    public static int GameLength;
+    public static List<Player> PlayerList = new List<Player>();
 
-    void Awake()
+    private void Awake()
     {
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
         DontDestroyOnLoad(gameObject);
     }
 }

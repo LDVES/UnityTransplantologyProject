@@ -10,6 +10,9 @@ TagManager:
   - Dice
   - GameBoard
   - Waypoint
+  - GameOver
+  - GameOverText
+  - GameOverPanel
   layers:
   - Default
   - TransparentFX
