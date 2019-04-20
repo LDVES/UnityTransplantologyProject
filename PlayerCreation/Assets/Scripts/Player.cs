@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Player
 {
-    string nick;
-    Image counterGraphics;
+    public string nick;
+    public Sprite counterGraphics;
 
-    public Player (string _nick, Image _counterGraphics)
+    public Player (string _nick, Sprite _counterGraphics)
     {
         nick = _nick;
         counterGraphics = _counterGraphics;

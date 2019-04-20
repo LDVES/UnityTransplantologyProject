@@ -7,6 +7,12 @@ TagManager:
   - GameManager
   - PlayerPanel
   - SelectedCounter
+  - Dice
+  - GameBoard
+  - Waypoint
+  - GameOver
+  - GameOverText
+  - GameOverPanel
   layers:
   - Default
   - TransparentFX
@@ -16,7 +22,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -41,6 +47,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackgroundCanvas
+    uniqueID: 2719858451
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Board
+    uniqueID: 608669549
+    locked: 0
+  - name: Player
+    uniqueID: 3011651533
+    locked: 0
+  - name: Dice
+    uniqueID: 3927600827
+    locked: 0
+  - name: Canvas
+    uniqueID: 1817163053
     locked: 0
