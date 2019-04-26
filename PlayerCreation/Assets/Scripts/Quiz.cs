@@ -65,13 +65,13 @@ public class Quiz : MonoBehaviour
             {
                 Buttons[i].GetComponent<Button>().onClick.RemoveAllListeners();
                 Buttons[i].GetComponent<Button>().onClick.AddListener(GoodAnswer);
-                Buttons[i].GetComponentInChildren<Text>().text = answers[randomAnswer].TrimStart('_');
+                Buttons[i].GetComponentInChildren<TextMeshProUGUI>().text = answers[randomAnswer].TrimStart('_');
             }
             else
             {
                 Buttons[i].GetComponent<Button>().onClick.RemoveAllListeners();
                 Buttons[i].GetComponent<Button>().onClick.AddListener(BadAnswer);
-                Buttons[i].GetComponentInChildren<Text>().text = answers[randomAnswer];
+                Buttons[i].GetComponentInChildren<TextMeshProUGUI>().text = answers[randomAnswer];
             }
 
             answers.Remove(answers[randomAnswer]);

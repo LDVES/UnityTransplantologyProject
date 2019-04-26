@@ -9,6 +9,7 @@ public class Dice : MonoBehaviour
     public bool isDiceRollAllowed = true;
     public Quiz quizScript;
     public TogglePanel togglePanel;
+    public Animator DiceAnimator;
 
     private SpriteRenderer diceRenderer;
     private int randomDiceResult;
@@ -23,7 +24,10 @@ public class Dice : MonoBehaviour
     void OnMouseDown()
     {
         if (isDiceRollAllowed)
+        {
+            StopBlinkAnimation();
             StartCoroutine("Roll");
+        }
     }
 
     private IEnumerator Roll()
@@ -44,5 +48,17 @@ public class Dice : MonoBehaviour
     public int GetDiceResult()
     {
         return randomDiceResult;
+    }
+
+    public void StartBlinkAnimation()
+    {
+        DiceAnimator.SetBool("IsBlinking", true);
+        DiceAnimator.Play("DiceBlink");
+    }
+
+    public void StopBlinkAnimation()
+    {
+        DiceAnimator.SetBool("IsBlinking", false);
+        DiceAnimator.Play("DiceDefault");
     }
 }

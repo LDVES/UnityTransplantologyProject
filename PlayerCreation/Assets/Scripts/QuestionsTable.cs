@@ -19,7 +19,6 @@ public class QuestionsTable : MonoBehaviour
         public string Answer_1;
         public string Answer_2;
         public string Answer_3;
-
     }
 
     List<Row> rowList = new List<Row>();

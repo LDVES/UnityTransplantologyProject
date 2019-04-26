@@ -19,12 +19,12 @@ MonoBehaviour:
   m_fontInfo:
     Name: Source Sans Pro
     PointSize: 79
-    Scale: 0
+    Scale: 1
     CharacterCount: 110
     LineHeight: 99
     Baseline: 0
     Ascender: 78
-    CapHeight: 0
+    CapHeight: 51
     Descender: -22
     CenterLine: 0
     SuperscriptOffset: 78
@@ -34,7 +34,7 @@ MonoBehaviour:
     UnderlineThickness: 3.95
     strikethrough: 20.363636
     strikethroughThickness: 3.95
-    TabWidth: 0
+    TabWidth: 197.5
     Padding: 2
     AtlasWidth: 512
     AtlasHeight: 512

@@ -19,6 +19,7 @@ public class TurnManager : MonoBehaviour
         StartCoroutine("ShowPopup");
         
         dice.isDiceRollAllowed = true;
+        dice.StartBlinkAnimation();
     }
 
     IEnumerator ShowPopup()
