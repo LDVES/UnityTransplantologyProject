@@ -124,6 +124,8 @@ GameObject:
   - component: {fileID: 46065412}
   - component: {fileID: 46065411}
   - component: {fileID: 46065410}
+  - component: {fileID: 46065414}
+  - component: {fileID: 46065413}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -230,6 +232,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46065408}
   m_CullTransparentMesh: 0
+--- !u!114 &46065413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46065408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed91643f99a7ce4492ac466ad4a089f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuizScript: {fileID: 2063008284}
+--- !u!95 &46065414
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46065408}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c09210ea34958ea459c65be8e303ca54, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &72379598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1070,7 @@ GameObject:
   - component: {fileID: 456564024}
   m_Layer: 0
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1470,6 +1504,8 @@ GameObject:
   - component: {fileID: 681062332}
   - component: {fileID: 681062331}
   - component: {fileID: 681062330}
+  - component: {fileID: 681062334}
+  - component: {fileID: 681062333}
   m_Layer: 0
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1576,6 +1612,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681062328}
   m_CullTransparentMesh: 0
+--- !u!114 &681062333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681062328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed91643f99a7ce4492ac466ad4a089f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuizScript: {fileID: 2063008284}
+--- !u!95 &681062334
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681062328}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c09210ea34958ea459c65be8e303ca54, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &762702340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,6 +2910,8 @@ GameObject:
   - component: {fileID: 1855067301}
   - component: {fileID: 1855067300}
   - component: {fileID: 1855067299}
+  - component: {fileID: 1855067303}
+  - component: {fileID: 1855067302}
   m_Layer: 0
   m_Name: Button (1)
   m_TagString: Untagged
@@ -2948,6 +3018,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855067297}
   m_CullTransparentMesh: 0
+--- !u!114 &1855067302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855067297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed91643f99a7ce4492ac466ad4a089f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuizScript: {fileID: 2063008284}
+--- !u!95 &1855067303
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855067297}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c09210ea34958ea459c65be8e303ca54, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1872965210
 GameObject:
   m_ObjectHideFlags: 0
@@ -3867,7 +3969,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnManger: {fileID: 527704934}
   spawnScript: {fileID: 527704933}
-  toggleScript: {fileID: 456564024}
   TopText: {fileID: 1949489942}
   QuestionText: {fileID: 2083293809}
   Buttons:

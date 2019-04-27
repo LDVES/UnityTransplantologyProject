@@ -351,11 +351,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -959,7 +959,7 @@ Transform:
   m_Children:
   - {fileID: 1977044828}
   - {fileID: 1913864837}
-  - {fileID: 2068088195}
+  - {fileID: 8523545947523095008}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1314,11 +1314,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1352,6 +1352,7 @@ GameObject:
   - component: {fileID: 711906380}
   - component: {fileID: 711906379}
   - component: {fileID: 711906378}
+  - component: {fileID: 711906381}
   m_Layer: 0
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1458,6 +1459,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711906376}
   m_CullTransparentMesh: 0
+--- !u!95 &711906381
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711906376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16306f54247b16c4d9c2f07eabff2566, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &762702340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,6 +1847,7 @@ GameObject:
   - component: {fileID: 1202382554}
   - component: {fileID: 1202382553}
   - component: {fileID: 1202382552}
+  - component: {fileID: 1202382555}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1933,6 +1954,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202382550}
   m_CullTransparentMesh: 0
+--- !u!95 &1202382555
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202382550}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16306f54247b16c4d9c2f07eabff2566, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1306208487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,11 +2138,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3310,11 +3350,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3395,6 +3435,7 @@ GameObject:
   - component: {fileID: 1978565401}
   - component: {fileID: 1978565400}
   - component: {fileID: 1978565399}
+  - component: {fileID: 1978565402}
   m_Layer: 0
   m_Name: Button (1)
   m_TagString: Untagged
@@ -3501,6 +3542,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978565397}
   m_CullTransparentMesh: 0
+--- !u!95 &1978565402
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978565397}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16306f54247b16c4d9c2f07eabff2566, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2011721974
 GameObject:
   m_ObjectHideFlags: 0
@@ -3711,7 +3771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2063008281
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3793,8 +3853,8 @@ MonoBehaviour:
   QuestionText: {fileID: 2083293809}
   Buttons:
   - {fileID: 1202382550}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1978565397}
+  - {fileID: 711906376}
   Questions: {fileID: 1099020390}
 --- !u!95 &2063008285
 Animator:
@@ -3815,12 +3875,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!4 &2068088195 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8523545948240026716, guid: e3688cbe349bf0d48b4b24e6f2327c38,
-    type: 3}
-  m_PrefabInstance: {fileID: 8523545947523095007}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2068088196 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8523545948240026715, guid: e3688cbe349bf0d48b4b24e6f2327c38,
@@ -3968,11 +4022,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4083,11 +4137,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 527704932}
     m_Modifications:
-    - target: {fileID: 8523545948240026719, guid: e3688cbe349bf0d48b4b24e6f2327c38,
-        type: 3}
-      propertyPath: m_Name
-      value: Dice
-      objectReference: {fileID: 0}
     - target: {fileID: 8523545948240026716, guid: e3688cbe349bf0d48b4b24e6f2327c38,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4153,5 +4202,15 @@ PrefabInstance:
       propertyPath: togglePanel
       value: 
       objectReference: {fileID: 456564024}
+    - target: {fileID: 8523545948240026719, guid: e3688cbe349bf0d48b4b24e6f2327c38,
+        type: 3}
+      propertyPath: m_Name
+      value: Dice
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3688cbe349bf0d48b4b24e6f2327c38, type: 3}
+--- !u!4 &8523545947523095008 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 8523545947523095007}
+  m_PrefabAsset: {fileID: 0}

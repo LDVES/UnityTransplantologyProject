@@ -8,7 +8,6 @@ public class Quiz : MonoBehaviour
 {
     public TurnManager turnManger;
     public SpawnPlayerScript spawnScript;
-    public TogglePanel toggleScript;
     public TextMeshProUGUI TopText;
     public TextMeshProUGUI QuestionText;
     public GameObject[] Buttons;
@@ -20,25 +19,18 @@ public class Quiz : MonoBehaviour
     private void SetCurrentPlayerText()
     {
         //Change top text to current player
-        TopText.text = "Pytanie dla: " + spawnScript.PlayerGameObjectList[turnManger.TurnIndex].name;
+        SetQuizTopText("Pytanie dla: " + spawnScript.PlayerGameObjectList[turnManger.TurnIndex].name);
     }
 
-    public void GoodAnswer()
+    public void MovePlayer()
     {
-        toggleScript.HideQuizPanel();
-        //TODO: show good answer popup
         spawnScript.PlayerGameObjectList[turnManger.TurnIndex].GetComponent<PlayerMovement>().FinishWaypointIndex = spawnScript.PlayerGameObjectList[turnManger.TurnIndex].GetComponent<PlayerMovement>().waypointIndex + GameObject.FindGameObjectWithTag("Dice").GetComponent<Dice>().GetDiceResult();
         spawnScript.PlayerGameObjectList[turnManger.TurnIndex].GetComponent<PlayerMovement>().Move();
-        TopText.text = "Dobra odpowiedź!";
-
     }
 
-    public void BadAnswer()
+    public void SetQuizTopText(string topText)
     {
-        toggleScript.HideQuizPanel();
-        //show popup
-        turnManger.NextTurn();
-        TopText.text = "Zła odpowiedź!";
+        TopText.text = topText;
     }
 
     public void ShowRandomQuestion()
@@ -60,17 +52,17 @@ public class Quiz : MonoBehaviour
         for (int i = 0; i < answersAmount; i++)
         {
             int randomAnswer = Random.Range(0, answers.Count);
-            
+
             if (answers[randomAnswer].Contains("_"))
             {
                 Buttons[i].GetComponent<Button>().onClick.RemoveAllListeners();
-                Buttons[i].GetComponent<Button>().onClick.AddListener(GoodAnswer);
+                Buttons[i].GetComponent<Button>().onClick.AddListener(Buttons[i].GetComponent<QuizButton>().StartGoodAnswer);
                 Buttons[i].GetComponentInChildren<TextMeshProUGUI>().text = answers[randomAnswer].TrimStart('_');
             }
             else
             {
                 Buttons[i].GetComponent<Button>().onClick.RemoveAllListeners();
-                Buttons[i].GetComponent<Button>().onClick.AddListener(BadAnswer);
+                Buttons[i].GetComponent<Button>().onClick.AddListener(Buttons[i].GetComponent<QuizButton>().StartBadAnswer);
                 Buttons[i].GetComponentInChildren<TextMeshProUGUI>().text = answers[randomAnswer];
             }
 

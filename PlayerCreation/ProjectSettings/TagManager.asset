@@ -13,6 +13,7 @@ TagManager:
   - GameOver
   - GameOverText
   - GameOverPanel
+  - Canvas
   layers:
   - Default
   - TransparentFX
