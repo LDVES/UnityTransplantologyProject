@@ -1,10 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
+    public Animator SceneAnimator;
+
+    private string sceneToLoadName;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -15,9 +17,16 @@ public class SceneManagerScript : MonoBehaviour
         }
     }
 
-    public void LoadScene(string sceneName)
+    public void SwitchScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        sceneToLoadName = sceneName;
+        SceneAnimator.SetTrigger("StartFade");
+    }
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(sceneToLoadName);
+        SceneAnimator.SetTrigger("FadeIn");
     }
 
     public void StartGame()
@@ -25,20 +34,20 @@ public class SceneManagerScript : MonoBehaviour
         switch (GameManagerScript.GameLength)
         {
             default:
-                //MediumBoard
-                LoadScene("MediumBoard");
+            //MediumBoard
+                SwitchScene("MediumBoard");
                 break;
             //short game
             case 17:
-                LoadScene("ShortBoard");
+                SwitchScene("ShortBoard");
                 break;
             //medium game
             case 22:
-                LoadScene("MediumBoard");
+                SwitchScene("MediumBoard");
                 break;
             //long game
             case 27:
-                LoadScene("LongBoard");
+                SwitchScene("LongBoard");
                 break;
 
         }

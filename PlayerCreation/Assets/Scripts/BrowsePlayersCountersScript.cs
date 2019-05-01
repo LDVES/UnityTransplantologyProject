@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class BrowsePlayersCountersScript : MonoBehaviour
@@ -9,11 +7,6 @@ public class BrowsePlayersCountersScript : MonoBehaviour
     public Image PlayerPanelGraphics;
 
     private int index;
-
-    private void Start()
-    {
-        SetPanelGraphicsToIndex();
-    }
 
     public void SwichImageToRight()
     {
@@ -46,5 +39,10 @@ public class BrowsePlayersCountersScript : MonoBehaviour
     private void SetPanelGraphicsToIndex()
     {
         PlayerPanelGraphics.sprite = CounterGraphics[index];
+    }
+
+    public void SetPanelGraphics(int graphicsIndex)
+    {
+        PlayerPanelGraphics.sprite = CounterGraphics[graphicsIndex];
     }
 }

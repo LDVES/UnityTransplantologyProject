@@ -24,6 +24,6 @@ public class GameOver : MonoBehaviour
     {
         spawnScript.PlayerGameObjectList.Clear();
         SceneManager = GameObject.Find("GameManager").GetComponent<SceneManagerScript>();
-        SceneManager.LoadScene("GameSetup");
+        SceneManager.SwitchScene("GameSetup");
     }
 }
